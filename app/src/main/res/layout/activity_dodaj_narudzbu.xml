@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--cijeli vertikalni layout -->
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginBottom="@dimen/layout_margin"
+        android:layout_marginRight="@dimen/layout_margin">
+
+    <!--horizontalni layout za odabir stola preko spinera-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:layout_marginRight="@dimen/layout_margin">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/odaberi_stol"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Spinner
+                android:id="@+id/spStolovi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/stolovi">
+            </Spinner>
+        </LinearLayout>
+        <!--kraj horizontalni layout za odabir stola preko spinera-->
+
+        <!--horizontalni layout za odabir kategorija pića checkboxa-->
+
+    </LinearLayout>
+    <!--kraj horizontalni layout za odabir kategorija pića checkboxa-->
+
+    <!--horizontalni layout za odabir kategorija pića checkboxa-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginLeft="@dimen/layout_margin"
+        android:layout_marginRight="@dimen/layout_margin">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/odaberi_kategorije"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <CheckBox android:id="@+id/chkboxSokovi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sokovi" />
+            <CheckBox android:id="@+id/chkboxPiva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/piva" />
+            <CheckBox android:id="@+id/chkboxTopliNapitci"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/topli_napitci" />
+            <CheckBox android:id="@+id/chkboxVina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vina" />
+        </LinearLayout>
+        
+
+    </LinearLayout>
+    <!--kraj horizontalni layout za odabir kategorija pića checkboxa-->
+
+    <!-- horizontalna linija nakon checkboxova-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+        <!-- linear layout za odabir iz kategorije sokova-->
+    <LinearLayout
+            android:id="@+id/layoutOdaberiSokove"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <!-- cedevita i koliko komada -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox android:id="@+id/chkboxCedevita"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/Cedevita" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="x"
+                />
+            <EditText
+                android:id="@+id/etBrojCedevita"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+        <!-- kraj cedevita i koliko komada -->
+
+        <!-- fanta i koliko komada -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox android:id="@+id/chkboxFanta"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/Fanta" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="x"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/etBrojFanti"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number" />
+        </LinearLayout>
+        <!-- kraj fanta  i koliko komada -->
+
+        <!-- coca cola i koliko komada -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox android:id="@+id/chkboxCocaCola"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/CocaCola" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="x"
+                />
+            <EditText
+                android:id="@+id/etBrojCocaColi"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+        <!-- kraj coca cola  i koliko komada -->
+
+        <!-- vocni i koliko komada -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox android:id="@+id/chkboxVocni"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/Vocni" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="x"
+                android:inputType="number"/>
+            <EditText
+                android:id="@+id/etBrojVocnih"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </LinearLayout>
+        <!-- kraj vocni  i koliko komada -->
+     </LinearLayout>
+        <!--kraj linear layout za odabir iz kategorije sokova-->
+
+     <!-- linear layout za odabir iz kategorije piva-->
+     <LinearLayout
+        android:id="@+id/layoutOdaberiPiva"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+         <!-- Osjecko i koliko komada -->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+             <CheckBox android:id="@+id/chkboxOsjecko"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="@string/Osjecko" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="x"
+                 android:inputType="number"/>
+             <EditText
+                 android:id="@+id/etBrojOsjecko"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:inputType="number"/>
+         </LinearLayout>
+         <!-- kraj Osjecko i koliko komada -->
+
+         <!-- Ozujsko i koliko komada -->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+             <CheckBox android:id="@+id/chkboxOzujsko"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="@string/Ozujsko" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="x"
+                 android:inputType="number"/>
+             <EditText
+                 android:id="@+id/etBrojOzujsko"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:inputType="number"/>
+         </LinearLayout>
+         <!-- kraj Ozujsko  i koliko komada -->
+
+         <!-- Karlovacko i koliko komada -->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+             <CheckBox android:id="@+id/chkboxKarlovacko"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="@string/Karlovacko" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="x"
+                 android:inputType="number"/>
+             <EditText
+                 android:id="@+id/etBrojKarlovacko"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:inputType="number"/>
+         </LinearLayout>
+         <!-- kraj Karlovacko  i koliko komada -->
+
+         <!-- Heineken i koliko komada -->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+             <CheckBox android:id="@+id/chkboxHeineken"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="@string/Heineken" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="x"
+                 android:inputType="number"/>
+             <EditText
+                 android:id="@+id/etBrojHeineken"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:inputType="number"/>
+         </LinearLayout>
+         <!-- kraj Heineken  i koliko komada -->
+
+         <!-- Amber i koliko komada -->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+             <CheckBox android:id="@+id/chkboxAmber"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="@string/Amber" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="x"
+                 android:inputType="number"/>
+             <EditText
+                 android:id="@+id/etBrojAmber"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:inputType="number"/>
+         </LinearLayout>
+         <!-- kraj Amber  i koliko komada -->
+
+         <!-- Corona i koliko komada -->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+             <CheckBox android:id="@+id/chkboxCorona"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="@string/Corona" />
+             <TextView
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:text="x"
+                 android:inputType="number"/>
+             <EditText
+                 android:id="@+id/etBrojCorona"
+                 android:layout_width="0dp"
+                 android:layout_weight="1"
+                 android:layout_height="wrap_content"
+                 android:inputType="number"/>
+         </LinearLayout>
+         <!-- kraj Corona  i koliko komada -->
+    </LinearLayout>
+        <!--kraj linear layout za odabir iz kategorije piva-->
+
+        <!-- linear layout za odabir iz kategorije toplih napitaka-->
+        <LinearLayout
+            android:id="@+id/layoutOdaberiTopleNapitke"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Kava i koliko komada -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox android:id="@+id/chkboxKava"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Kava" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="x"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/etBrojKava"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <!-- kraj Kava  i koliko komada -->
+            <!-- Cappuccino i koliko komada -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox android:id="@+id/chkboxCappuccino"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cappuccino" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="x"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/etBrojCappuccino"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <!-- kraj Cappuccino  i koliko komada -->
+            <!-- Toplacokolada i koliko komada -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox android:id="@+id/chkboxToplacokolada"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Toplacokolada" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="x"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/etBrojToplacokolada"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <!-- kraj Toplacokolada  i koliko komada -->
+
+        </LinearLayout>
+        <!--kraj linear layout za odabir iz kategorije toplih napitaka-->
+
+
+        <!-- linear layout za odabir iz kategorije vina-->
+        <LinearLayout
+            android:id="@+id/layoutOdaberiVina"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Frankovka i koliko komada -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox android:id="@+id/chkboxFrankovka"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Frankovka" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="x"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/etBrojFrankovka"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <!-- kraj Frankovka  i koliko komada -->
+            <!-- Grasevina i koliko komada -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox android:id="@+id/chkboxGrasevina"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Grasevina" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="x"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/etBrojGrasevina"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <!-- kraj Grasevina  i koliko komada -->
+            <!-- Traminac i koliko komada -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox android:id="@+id/chkboxTraminac"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Traminac" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="x"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/etBrojTraminac"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <!-- kraj Traminac  i koliko komada -->
+            <!-- Zdrijebcevakrv i koliko komada -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox android:id="@+id/chkboxZdrijebcevakrv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Zdrijebcevakrv" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="x"
+                    android:inputType="number"/>
+                <EditText
+                    android:id="@+id/etBrojZdrijebcevakrv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <!-- kraj Zdrijebcevakrv  i koliko komada -->
+        </LinearLayout>
+        <!--kraj linear layout za odabir iz kategorije vina-->
+
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <!-- kraj layouta osim donja dva gumba-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnAddNarudzbaToDb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dodaj"/>
+        <Button
+            android:id="@+id/btnAddToMain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/nazad"/>
+    </LinearLayout>
+</LinearLayout>
+    <!--kraj cijelog vertikalni layout -->

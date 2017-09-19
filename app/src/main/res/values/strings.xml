@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Narudzbe</string>
+    <string name="dodaj_narudzbu">Dodaj narudzbu</string>
+    <string name="izlistaj_narudzbe">Izlistaj narudzbe</string>
+    <string name="odaberi_stol">Odaberi stol</string>
+    <string name="nazad">Nazad</string>
+    <string name="dodaj">Dodaj</string>
+    <string name="odaberi_kategorije">Odaberi kategorije</string>
+    <string name="sokovi">Sokovi</string>
+    <string name="piva">Piva</string>
+    <string name="vina">Vina</string>
+    <string name="topli_napitci">Topli napitci</string>
+    <string name="title_activity_izlistaj_narudzbe">IzlistajNarudzbeActivity</string>
+    <string name="narudzba">Narudzba</string>
+
+    <string name="Osjecko">Osjecko</string>
+    <string name="Ozujsko">Ozujsko</string>
+    <string name="Karlovacko">Karlovacko</string>
+    <string name="Heineken">Heineken</string>
+    <string name="Amber">Amber</string>
+    <string name="Corona">Corona</string>
+
+    <string name="Frankovka">Frankovka</string>
+    <string name="Grasevina">Grasevina</string>
+    <string name="Traminac">Traminac</string>
+    <string name="Zdrijebcevakrv">Zdrijebceva krv</string>
+
+    <string name="CocaCola">Coca Cola</string>
+    <string name="Fanta">Fanta</string>
+    <string name="Vocni">Vocni</string>
+    <string name="Cedevita">Cedevita</string>
+
+    <string name="Kava">Kava</string>
+    <string name="Cappuccino">Cappuccino</string>
+    <string name="Toplacokolada">Topla cokolada</string>
+
+    <string name="ukupno">Ukupno:</string>
+    <string name="kn">kn</string>
+    <string-array name="stolovi">
+        <item>Stol 1</item>
+        <item>Stol 2</item>
+        <item>Stol 3</item>
+        <item>Stol 4</item>
+        <item>Stol 5</item>
+        <item>Stol 6</item>
+        <item>Stol 7</item>
+        <item>Stol 8</item>
+        <item>Stol 9</item>
+        <item>Stol 10</item>
+    </string-array>
+
+    <string-array name="cijene">
+        <item>9kn</item>
+        <item>10kn</item>
+        <item>12kn</item>
+        <item>70kn</item>
+    </string-array>
+</resources>
